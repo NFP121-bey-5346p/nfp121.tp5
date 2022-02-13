@@ -23,7 +23,7 @@ public class JPanelListe2 extends JPanel implements ActionListener, ItemListener
 
     private CheckboxGroup mode = new CheckboxGroup();
     private Checkbox ordreCroissant = new Checkbox("croissant", mode, false);
-    private Checkbox ordreDecroissant = new Checkbox("dÃ©croissant", mode, false);
+    private Checkbox ordreDecroissant = new Checkbox("décroissant", mode, false);
 
     private JButton boutonOccurrences = new JButton("occurrence");
 
@@ -58,7 +58,7 @@ public class JPanelListe2 extends JPanel implements ActionListener, ItemListener
             afficheur.setText(liste.getClass().getName() + " et "+ occurrences.getClass().getName());
             texte.setText(liste.toString());
         }else{
-            texte.setText("la classe Chapitre2CoreJava semble incomplÃ¨te");
+            texte.setText("la classe Chapitre2CoreJava semble incomplète");
         }
 
         setLayout(new BorderLayout());
@@ -67,7 +67,7 @@ public class JPanelListe2 extends JPanel implements ActionListener, ItemListener
         add(texte, "Center");
 
         boutonRechercher.addActionListener(this);
-        // Ã  complÃ©ter;
+        // à compléter;
 
     }
 
@@ -77,13 +77,13 @@ public class JPanelListe2 extends JPanel implements ActionListener, ItemListener
             if (ae.getSource() == boutonRechercher || ae.getSource() == saisie) {
                 res = liste.contains(saisie.getText());
                 Integer occur = occurrences.get(saisie.getText());
-                afficheur.setText("rÃ©sultat de la recherche de : "
+                afficheur.setText("résultat de la recherche de : "
                     + saisie.getText() + " -->  " + res);
             } else if (ae.getSource() == boutonRetirer) {
                 res = retirerDeLaListeTousLesElementsCommencantPar(saisie
                     .getText());
                 afficheur
-                .setText("rÃ©sultat du retrait de tous les Ã©lÃ©ments commenÃ§ant par -->  "
+                .setText("résultat du retrait de tous les éléments commençant par -->  "
                     + saisie.getText() + " : " + res);
             } else if (ae.getSource() == boutonOccurrences) {
                 Integer occur = occurrences.get(saisie.getText());
@@ -101,18 +101,18 @@ public class JPanelListe2 extends JPanel implements ActionListener, ItemListener
 
     public void itemStateChanged(ItemEvent ie) {
         if (ie.getSource() == ordreCroissant)
-        ;// Ã  complÃ©ter
+        ;// à compléter
         else if (ie.getSource() == ordreDecroissant)
-        ;// Ã  complÃ©ter
+        ;// à compléter
 
         texte.setText(liste.toString());
     }
 
     private boolean retirerDeLaListeTousLesElementsCommencantPar(String prefixe) {
         boolean resultat = false;
-        // Ã  complÃ©ter
-        // Ã  complÃ©ter
-        // Ã  complÃ©ter
+        // à compléter
+        // à compléter
+        // à compléter
         return resultat;
     }
 
